@@ -1,53 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css">
-  <title>Survey Form</title>
-</head>
-<body>
-  <div id="header-container">
-   <h1 id="title">Survey Form.</h1>
-   <p id="description">Thank you for participating in our <strong>survey.</strong> Your responses will remain confidential and help us <strong>improve</strong> our services.</p>
-  </div>
-  <form id="survey-form">
-    <div id="form-div">
-    <hr>
-    <label for="name" id="name-label"> Enter your <strong>Name:</strong><input type="text" id="name" required placeholder="Tell us your name!"></label>
-    <label for="email" id="email-label"> Enter your <strong>Email:</strong><input type="email" id="email" required placeholder="Where can we reach you?"></label>
-    <label for="number" id="number-label"> Enter your <strong>Age:</strong><input type="number" id="number" required min="10" max="100" placeholder="How old are you?"></label>
-    <label for="color" id="color-label">What is your favorite <strong>Color?</strong>
-      <select id="color" required>
-        <option value=""disabled selected>(select one)</option>
-        <option value="1">Red</option>
-        <option value="2">Orange</option>
-        <option value="3">Yellow</option>
-        <option value="4">Green</option>
-        <option value="5">Blue</option>
-        <option value="6">Purple</option>
-      </select>
-  </label>
-  <div id="tools">
-    <legend>Which <strong>Art tools</strong> do you use?</legend>
-    <div class="checkbox-group">
-    <label for="pencil"><input type="checkbox" id="pencil" name="art-tools" value="pencil"> ✏️ Pencil</label>
-    <label for="brush"><input type="checkbox" id="brush" name="art-tools" value="brush"> 🖌️ Paintbrush</label>
-    <label for="marker"><input type="checkbox" id="marker" name="art-tools" value="marker"> 🖍️ Marker</label>
-    <label for="charcoal"><input type="checkbox" id="charcoal" name="art-tools" value="charcoal"> 🎨 Palette</label>
-    <label for="digital"><input type="checkbox" id="digital" name="art-tools" value="digital"> 🖥️ Digital Tablet</label>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div id="header-container">
+      <h1 id="title">Survey Form.</h1>
+      <p id="description">
+        Thank you for participating in our <strong>survey.</strong> Your responses will remain confidential and help us
+        <strong>improve</strong> our services.
+      </p>
     </div>
-</div>
-    <div id="pets"><legend>What’s your favorite type of <strong>Pet?</strong></legend>
-<div class="radio-group">
-  <label for="dog"><input type="radio" id="dog" name="pet" value="dog" checked> Dog</label>
-  <label for="cat"><input type="radio" id="cat" name="pet" value="cat"> Cat</label>
-  <label for="fish"><input type="radio" id="fish" name="pet" value="fish"> <strong>Gold</strong>fish</label>
-  </div>
-</div>
-<label for="feedback">Any additional comments or <strong>Feedback?</strong><textarea id="feedback" rows="3" cols="30" placeholder="Your secrets are safe with us... probably!"></textarea>
-    </label>
-<hr>
-</div>
-<button type="submit" id="submit"><strong>Submit  </strong>Survey</button>
- </form>
-</body>
+    <form id="survey-form">
+      <div id="form-div">
+        <hr />
+        <label for="name" id="name-label">
+          Enter your <strong>Name:</strong><input type="text" id="name" required placeholder="Tell us your name!"
+        /></label>
+        <label for="email" id="email-label">
+          Enter your <strong>Email:</strong
+          ><input type="email" id="email" required placeholder="Where can we reach you?"
+        /></label>
+        <label for="number" id="number-label">
+          Enter your <strong>Age:</strong
+          ><input type="number" id="number" required min="10" max="100" placeholder="How old are you?"
+        /></label>
+        <label for="color" id="color-label"
+          >What is your favorite <strong>Color?</strong>
+          <select id="color" required>
+            <option value="" disabled selected>(select one)</option>
+            <option value="1">Red</option>
+            <option value="2">Orange</option>
+            <option value="3">Yellow</option>
+            <option value="4">Green</option>
+            <option value="5">Blue</option>
+            <option value="6">Purple</option>
+          </select>
+        </label>
+        <div id="tools">
+          <fieldset>
+            <legend>Which <strong>Art tools</strong> do you use?</legend>
+            <div class="field-content">
+              <label for="pencil"
+                ><input type="checkbox" id="pencil" name="art-tools" value="pencil" /> ✏️ Pencil</label
+              >
+              <label for="brush"
+                ><input type="checkbox" id="brush" name="art-tools" value="brush" /> 🖌️ Paintbrush</label
+              >
+              <label for="marker"
+                ><input type="checkbox" id="marker" name="art-tools" value="marker" /> 🖍️ Marker</label
+              >
+              <label for="charcoal"
+                ><input type="checkbox" id="charcoal" name="art-tools" value="charcoal" /> 🎨 Palette</label
+              >
+              <label for="digital"
+                ><input type="checkbox" id="digital" name="art-tools" value="digital" /> 🖥️ Digital Tablet</label
+              >
+            </div>
+          </fieldset>
+        </div>
+        <div id="pets">
+          <fieldset>
+            <legend>What’s your favorite type of <strong>Pet?</strong></legend>
+            <div class="field-content">
+              <label for="dog"><input type="radio" id="dog" name="pet" value="dog" checked /> Dog</label>
+              <label for="cat"><input type="radio" id="cat" name="pet" value="cat" /> Cat</label>
+              <label for="fish"
+                ><input type="radio" id="fish" name="pet" value="fish" /> <strong>Gold</strong>fish</label
+              >
+            </div>
+          </fieldset>
+        </div>
+        <label for="feedback"
+          >Any additional comments or <strong>Feedback?</strong
+          ><textarea
+            id="feedback"
+            rows="3"
+            cols="30"
+            placeholder="Your secrets are safe with us... probably!"></textarea>
+        </label>
+        <hr />
+      </div>
+      <button type="submit" id="submit"><strong>Submit </strong>Survey</button>
+    </form>
+  </body>
+</html>
